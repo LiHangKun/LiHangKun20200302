@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="1000dp">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="2100dp">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:background="#EA3223"
+               android:layout_height="150dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+           </RelativeLayout>
+           <ImageView
+               android:layout_width="50dp"
+               android:background="@mipmap/dog"
+               android:layout_margin="15dp"
+               android:layout_height="50dp" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="京东"
+               android:textSize="30dp"
+               android:textColor="#FFFFFF"
+               android:layout_marginTop="20dp"
+               android:layout_marginLeft="80dp"
+               android:layout_height="wrap_content" />
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:id="@+id/re"
+               android:layout_marginTop="80dp"
+               android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+           </android.support.v7.widget.RecyclerView>
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:id="@+id/retwo"
+               android:layout_marginTop="260dp"
+               android:layout_height="wrap_content">
+
+           </android.support.v7.widget.RecyclerView>
+
+           <android.support.v7.widget.RecyclerView
+               android:layout_marginTop="550dp"
+               android:id="@+id/rethree"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+           </android.support.v7.widget.RecyclerView>
+       </RelativeLayout>
+   </ScrollView>
+
+
+
+</LinearLayout>
