@@ -13,6 +13,7 @@ import com.bawei.lihangkun20200302.R;
 import com.bawei.lihangkun20200302.activity.MainActivity;
 import com.bawei.lihangkun20200302.bean.BeanClass;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.Priority;
 
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class MyAdapterOne extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int i) {
         String imageurl = horizontalListData.get(i).getImageurl();
-        Glide.with(context).load(imageurl).into(((ViewHolderOne)viewHolder).img);
+        Glide.with(context).load(imageurl).priority(Priority.HIGH).into(((ViewHolderOne)viewHolder).img);
         ((ViewHolderOne)viewHolder).lione.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

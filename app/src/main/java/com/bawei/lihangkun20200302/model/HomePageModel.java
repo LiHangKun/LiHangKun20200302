@@ -18,4 +18,19 @@ public class HomePageModel implements IHomePageContral.getModel {
             }
         });
     }
+
+    @Override
+    public void getSouJson(String json, final CallBackSouJson callBackSouJson) {
+        VolleyUtiles.getInstance().getDoGet(json, new VolleyUtiles.CallBackJson() {
+            @Override
+            public void succ(String json) {
+                callBackSouJson.souSuccess(json);
+            }
+
+            @Override
+            public void faiuld(String json) {
+                callBackSouJson.souFaiuld(json);
+            }
+        });
+    }
 }

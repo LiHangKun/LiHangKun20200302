@@ -33,6 +33,27 @@ public class HomePagePresenter extends BasePresenter implements IHomePageContral
     }
 
     @Override
+    public void getSouJson(String json) {
+        model.getReJson(json, new IHomePageContral.getModel.CallbackReJson() {
+            @Override
+            public void getReSuccess(String json) {
+                BaseIvew view = getView();
+                if(view instanceof IHomePageContral.getView){
+                    ((IHomePageContral.getView)view).souSuccess(json);
+                }
+            }
+
+            @Override
+            public void getReFaiuld(String json) {
+                BaseIvew view = getView();
+                if(view instanceof IHomePageContral.getView){
+                    ((IHomePageContral.getView)view).getReFaiuld(json);
+                }
+            }
+        });
+    }
+
+    @Override
     protected void initModel() {
         model=new HomePageModel();
     }

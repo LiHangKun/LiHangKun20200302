@@ -11,7 +11,7 @@ public abstract class BasePresenter<V extends BaseIvew> implements BaseIvew{
 
     public V getView(){
         if(mWeakReference!=null){
-                    return mWeakReference.get();
+            return mWeakReference.get();
         }
         return null;
     }

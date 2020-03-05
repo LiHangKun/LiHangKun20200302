@@ -6,18 +6,21 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
+
    <ScrollView
        android:layout_width="match_parent"
-       android:layout_height="1000dp">
+       android:layout_height="4800dp">
+
        <RelativeLayout
            android:layout_width="match_parent"
-           android:layout_height="2100dp">
+           android:layout_height="6000dp">
            <RelativeLayout
                android:layout_width="match_parent"
                android:background="#EA3223"
                android:layout_height="150dp">
 
            </RelativeLayout>
+
            <ImageView
                android:layout_width="50dp"
                android:background="@mipmap/dog"
@@ -31,24 +34,39 @@
                android:layout_marginTop="20dp"
                android:layout_marginLeft="80dp"
                android:layout_height="wrap_content" />
+           <com.bawei.lihangkun20200302.zidingyi.CustomViewGroup
+               android:layout_width="match_parent"
+               android:id="@+id/gp"
+                android:layout_marginTop="70dp"
+               android:layout_height="70dp">
+
+           </com.bawei.lihangkun20200302.zidingyi.CustomViewGroup>
+
            <android.support.v7.widget.RecyclerView
                android:layout_width="match_parent"
                android:id="@+id/re"
-               android:layout_marginTop="80dp"
+               android:layout_marginTop="150dp"
                android:layout_height="wrap_content">
 
            </android.support.v7.widget.RecyclerView>
            <android.support.v7.widget.RecyclerView
                android:layout_width="match_parent"
                android:id="@+id/retwo"
-               android:layout_marginTop="260dp"
-               android:layout_height="wrap_content">
+               android:layout_marginTop="350dp"
+               android:layout_height="300dp">
 
            </android.support.v7.widget.RecyclerView>
 
            <android.support.v7.widget.RecyclerView
-               android:layout_marginTop="550dp"
+               android:layout_marginTop="600dp"
                android:id="@+id/rethree"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+           </android.support.v7.widget.RecyclerView>
+           <android.support.v7.widget.RecyclerView
+               android:layout_marginTop="850dp"
+               android:id="@+id/refour"
                android:layout_width="match_parent"
                android:layout_height="wrap_content">
 
